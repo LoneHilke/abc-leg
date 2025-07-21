@@ -52,11 +52,11 @@ NAV_MENU_LEFT = [
     },
     {
         "name": "A",
-        "url": "/ideer",
+        "url": "/a",
     },
     {
         "name": "B",
-        "url": "/pris",
+        "url": "/b",
     },
     {
         "name": "C",

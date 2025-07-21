@@ -1,0 +1,17 @@
+{% extends 'leg/base.html' %}
+{% block content %}
+
+<h1><font color=blue>B - b</font></h1>
+<h4>B er det andet bogstav i alfabetet. Det er den første konsonant</h4>
+<br>
+<div class="row">
+{% for b in b %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{b.image.url}}" width="100" height="150"/><br><h3><b>{{b.ord}}</b></h3><br>{{b.beskrivelse}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}
