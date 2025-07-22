@@ -60,15 +60,15 @@ NAV_MENU_LEFT = [
     },
     {
         "name": "C",
-        "url": "/siger",
+        "url": "/c",
     },
     {
         "name": "D",
-        "url": "#",
+        "url": "d",
     },
     {
         "name": "E",
-        "url": "/om",
+        "url": "/e",
     },
     {
         "name": "F",
