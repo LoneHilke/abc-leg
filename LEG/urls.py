@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import Forside, AView, BView, CView, DView, EView
+from .views import Forside, AView, BView, CView, DView, EView, FView, GView, HView, IView, JView, KView, LView, MView, NView, OView, PView, QView, RView, SView, TView, UView, VView, WView, XView, YView, ZView, ÆView, ØView, ÅView
 
 urlpatterns = [
   path('', Forside.as_view(), name='forside'),
@@ -9,4 +9,28 @@ urlpatterns = [
   path('c/', CView.as_view(), name='c'),
   path('d/', DView.as_view(), name='d'),
   path('e/', EView.as_view(), name='e'),
+  path('f/', FView.as_view(), name='f'),
+  path('g/', GView.as_view(), name='g'),
+  path('h/', HView.as_view(), name='h'),
+  path('i/', IView.as_view(), name='i'),
+  path('j/', JView.as_view(), name='j'),
+  path('k/', KView.as_view(), name='k'),
+  path('l/', LView.as_view(), name='l'),
+  path('m/', MView.as_view(), name='m'),
+  path('n/', NView.as_view(), name='n'),
+  path('o/', OView.as_view(), name='o'),
+  path('p/', PView.as_view(), name='p'),
+  path('q/', QView.as_view(), name='q'),
+  path('r/', RView.as_view(), name='r'),
+  path('s/', SView.as_view(), name='s'),
+  path('t/', TView.as_view(), name='t'),
+  path('u/', UView.as_view(), name='u'),
+  path('v/', VView.as_view(), name='v'),
+  path('w/', WView.as_view(), name='w'),
+  path('x/', XView.as_view(), name='x'),
+  path('y/', YView.as_view(), name='y'),
+  path('z/', ZView.as_view(), name='z'),
+  path('æ/', ÆView.as_view(), name='æ'),
+  path('ø/', ØView.as_view(), name='ø'),
+  path('å/', ÅView.as_view(), name='d'),
 ]

@@ -1,0 +1,17 @@
+{% extends 'leg/base.html' %}
+{% block content %}
+
+<h1><font color=blue>L - l</font></h1>
+<h4>L er det tolvte bogstav i alfabetet. Det er den niende konsonant</h4>
+<br>
+<div class="row">
+{% for l in l %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{l.image.url}}" width="100" height="150"/><br><h3><b>{{l.ord}}</b></h3><br>{{l.beskrivelse}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}

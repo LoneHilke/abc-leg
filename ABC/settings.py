@@ -64,7 +64,7 @@ NAV_MENU_LEFT = [
     },
     {
         "name": "D",
-        "url": "d",
+        "url": "/d",
     },
     {
         "name": "E",
@@ -72,84 +72,84 @@ NAV_MENU_LEFT = [
     },
     {
         "name": "F",
-        "url": "#",
+        "url": "/f",
     },
     {
         "name": "G",
-        "url": "#",
+        "url": "/g",
     },
     {
         "name": "H",
-        "url": "#",
+        "url": "/h",
     },
     {
         "name": "I",
-        "url": "#",
+        "url": "/i",
     },
     {
         "name": "J",
-        "url": "#",
+        "url": "/j",
     },
     {
         "name": "K",
-        "url": "#",
+        "url": "/k",
     },
     {
         "name": "L",
-        "url": "#",
+        "url": "/l",
     },
     {
         "name": "M",
-        "url": "#",
+        "url": "/m",
     },
     {
         "name": "N",
-        "url": "#",
+        "url": "/n",
     },{
         "name": "O",
-        "url": "#",
+        "url": "/o",
     },{
         "name": "P",
-        "url": "#",
+        "url": "/p",
     },{
         "name": "Q",
-        "url": "#",
+        "url": "/q",
     },{
         "name": "R",
-        "url": "#",
+        "url": "/r",
     },{
         "name": "S",
-        "url": "#",
+        "url": "/s",
     },{
         "name": "T",
-        "url": "#",
+        "url": "/t",
     },{
         "name": "U",
-        "url": "#",
+        "url": "/u",
     },{
         "name": "V",
-        "url": "#",
+        "url": "/v",
     },{
         "name": "W",
-        "url": "#",
+        "url": "/w",
     },{
         "name": "X",
-        "url": "#",
+        "url": "/x",
     },{
         "name": "Y",
-        "url": "#",
+        "url": "/y",
     },{
         "name": "Z",
-        "url": "#",
+        "url": "/z",
     },{
         "name": "Æ",
-        "url": "#",
+        "url": "/æ",
     },{
         "name": "Ø",
-        "url": "#",
+        "url": "/ø",
     },{
         "name": "Å",
-        "url": "#",
+        "url": "/å",
     },{
         "name": "Stav til ordet",
         "url": "#",

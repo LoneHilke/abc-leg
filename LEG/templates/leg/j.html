@@ -1,0 +1,17 @@
+{% extends 'leg/base.html' %}
+{% block content %}
+
+<h1><font color=blue>J - j</font></h1>
+<h4>J er det tiende bogstav i alfabetet. Det er den syvende konsonant</h4>
+<br>
+<div class="row">
+{% for j in j %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{j.image.url}}" width="100" height="150"/><br><h3><b>{{j.ord}}</b></h3><br>{{j.beskrivelse}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}

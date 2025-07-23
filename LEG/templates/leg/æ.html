@@ -1,0 +1,17 @@
+{% extends 'leg/base.html' %}
+{% block content %}
+
+<h1><font color=blue>Æ - æ</font></h1>
+<h4>Æ er det 27. bogstav i alfabetet. Det er den syvende vokal</h4>
+<br>
+<div class="row">
+{% for æ in æ %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{æ.image.url}}" width="100" height="150"/><br><h3><b>{{æ.ord}}</b></h3><br>{{æ.beskrivelse}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}
