@@ -152,7 +152,7 @@ NAV_MENU_LEFT = [
         "url": "/å",
     },{
         "name": "Stav til ordet",
-        "url": "#",
+        "url": "/gaet",
     },{
         "name": "Find det rette ord",
         "url": "#",

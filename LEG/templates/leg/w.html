@@ -1,17 +1,18 @@
 {% extends 'leg/base.html' %}
 {% block content %}
 
-<h1><font color=blue>E - e</font></h1>
-<h4>E er det femte bogstav i alfabetet. Det er den anden vokal</h4>
+<h1><font color=blue>W - w</font></h1>
+<h4>W er det treogtyvende (23.) bogstav i alfabetet. Det er den attende konsonant</h4>
+<h4>W er også et af de bogstaver som ikke bliver brugt så ofte</h4>
 <br>
 <div class="row">
-{% for e in e %}
+{% for w in w %}
 <div class="col-sm-6 mb-3 mb-sm-0">
 <ul class="list-group list-group-horizontal">
-  <li class="list-group-item"><img class="rounded" src="{{e.image.url}}" width="100" height="150"/><br><h3><b>{{e.ord}}</b></h3><br>{{e.beskrivelse}}</li>
+  <li class="list-group-item"><img class="rounded" src="{{w.image.url}}" width="100" height="150"/><br><h3><b>{{w.ord}}</b></h3><br>{{w.beskrivelse}}</li>
   
 </ul>
 </div>
 {% endfor %}
 </div>
-{% endblock content %}
+{% endblock content %}w

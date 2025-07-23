@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from .models import A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, Æ, Ø, Å
+from .models import A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, Æ, Ø, Å, Alfabet
+from .forms import GætForm
+import random
 
 class Forside(View):
     def get(self, request, *args, **kwargs):
@@ -240,6 +242,54 @@ class ÅView(View):
             'å': å
         }
         return render(request, 'leg/å.html', context)
+    
+class GætView(View):
+    def get(self, request, *args, **kwargs):
+        billeder = Alfabet.objects.filter(...)  # fx udvalgte billeder fra session eller alfabet
+        return render(request, 'leg/tjek_tidligere.html', {'billeder': billeder})
 
+    def post(self, request, *args, **kwargs):
+        billede_id = request.POST.get('billede_id')
+        billede = Alfabet.objects.get(id=billede_id)
+        gæt = request.POST.get('gæt', '').strip().lower()
+        korrekt = billede.ord.strip().lower()
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert. Det rigtige svar er: {korrekt}"
+
+        billeder = Alfabet.objects.all()
+        feedback = {int(billede_id): resultat}  # dict med ID som nøgle
+
+        return render(request, 'leg/tjek_tidligere.html', {
+            'billeder': billeder,
+            'feedback': feedback
+        })
+    """def get(self, request, *args, **kwargs):
+        a = random.choice(A.objects.all())  # Vælg et tilfældigt 
+        b = random.choice(B.objects.all())  # Vælg et tilfældigt billede
+        form = GætForm()
+        return render(request, 'leg/gaet.html', {
+            'a': a, 
+            'b':b,
+            'form': form
+            })
+
+    def post(self, request, *args, **kwargs):
+        a_id = request.POST.get('a_id')
+        a = A.objects.get(id=a_id)
+        b_id = request.POST.get('b_id')
+        b = B.objects.get(id=b_id)
+        form = GætForm(request.POST)
+        resultat = None
+
+        if form.is_valid():
+            gæt = form.cleaned_data['gæt'].strip().lower()
+            korrekt = a.ord.strip().lower()
+            korrekt = b.ord.strip().lower()
+            if gæt == korrekt:
+                resultat = "✅ Korrekt!"
+            else:
+                resultat = f"❌ Forkert. Det rigtige svar er: {a.ord},{b.ord}"
+
+        return render(request, 'leg/gaet.html', {'a': a, 'b':b, 'form': form, 'resultat': resultat})"""
+     
 
        

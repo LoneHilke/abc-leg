@@ -1,14 +1,14 @@
 {% extends 'leg/base.html' %}
 {% block content %}
 
-<h1><font color=blue>E - e</font></h1>
-<h4>E er det femte bogstav i alfabetet. Det er den anden vokal</h4>
+<h1><font color=blue>O - o</font></h1>
+<h4>O er det femtende (15.) bogstav i alfabetet. Det er den fjerde vokal</h4>
 <br>
 <div class="row">
-{% for e in e %}
+{% for o in o %}
 <div class="col-sm-6 mb-3 mb-sm-0">
 <ul class="list-group list-group-horizontal">
-  <li class="list-group-item"><img class="rounded" src="{{e.image.url}}" width="100" height="150"/><br><h3><b>{{e.ord}}</b></h3><br>{{e.beskrivelse}}</li>
+  <li class="list-group-item"><img class="rounded" src="{{o.image.url}}" width="100" height="150"/><br><h3><b>{{o.ord}}</b></h3><br>{{o.beskrivelse}}</li>
   
 </ul>
 </div>

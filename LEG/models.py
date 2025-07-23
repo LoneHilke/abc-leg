@@ -232,3 +232,11 @@ class Å(models.Model):
 
     def __str__(self):
         return self.ord
+    
+class Alfabet(models.Model):
+    bogstav = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='images/')
+    ord = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.ord

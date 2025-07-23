@@ -1,0 +1,195 @@
+{% extends 'leg/base.html' %}
+{% block content %}
+
+<h2>Hvad forestiller dette billede?</h2>
+
+{% for billede in billeder %}
+    <div style="margin-bottom: 20px;">
+        <img src="{{ billede.image.url }}" alt="{{ billede.ord }}" style="max-width: 300px;"><br>
+
+        <form method="post" style="display: inline;">
+            {% csrf_token %}
+            <label>Hvad forestiller billedet?</label>
+            <input type="text" name="gæt">
+            <input type="hidden" name="billede_id" value="{{ billede.id }}">
+            <button type="submit">Tjek</button>
+        </form>
+
+        {% if feedback and billede.id in feedback %}
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+            <p><strong>{{ feedback.billede.id }}</strong></p>
+        {% endif %}
+    </div>
+{% endfor %}
+
+
+<!--<img src="{{ a.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+<img src="{{ b.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="a_id" value="{{ a.id }}">
+    <input type="hidden" name="b_id" value="{{ b.id }}">
+
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+
+
+
+
+
+<img src="{{ c.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="c_id" value="{{ c.id }}">
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+
+<img src="{{ d.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="d_id" value="{{ d.id }}">
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+
+<img src="{{ e.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="e_id" value="{{ e.id }}">
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+
+<img src="{{ f.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="f_id" value="{{ f.id }}">
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+
+<img src="{{ g.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="g_id" value="{{ g.id }}">
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}-->
+
+{% endblock content %}

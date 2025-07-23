@@ -1,14 +1,14 @@
 {% extends 'leg/base.html' %}
 {% block content %}
 
-<h1><font color=blue>E - e</font></h1>
-<h4>E er det femte bogstav i alfabetet. Det er den anden vokal</h4>
+<h1><font color=blue>R - r</font></h1>
+<h4>R er det attende (18.) bogstav i alfabetet. Det er den fjortende konsonant</h4>
 <br>
 <div class="row">
-{% for e in e %}
+{% for r in r %}
 <div class="col-sm-6 mb-3 mb-sm-0">
 <ul class="list-group list-group-horizontal">
-  <li class="list-group-item"><img class="rounded" src="{{e.image.url}}" width="100" height="150"/><br><h3><b>{{e.ord}}</b></h3><br>{{e.beskrivelse}}</li>
+  <li class="list-group-item"><img class="rounded" src="{{r.image.url}}" width="100" height="150"/><br><h3><b>{{r.ord}}</b></h3><br>{{r.beskrivelse}}</li>
   
 </ul>
 </div>
