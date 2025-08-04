@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import Forside, AView, BView, CView, DView, EView, FView, GView, HView, IView, JView, KView, LView, MView, NView, OView, PView, QView, RView, SView, TView, UView, VView, WView, XView, YView, ZView, ÆView, ØView, ÅView, GætView
+from .views import Forside, AView, BView, CView, DView, EView, FView, GView, HView, IView, JView, KView, LView, MView, NView, OView, PView, QView, RView, SView, TView, UView, VView, WView, XView, YView, ZView, ÆView, ØView, ÅView, GætView, Info, Tilføj
 
 urlpatterns = [
   path('', Forside.as_view(), name='forside'),
@@ -32,6 +32,8 @@ urlpatterns = [
   path('z/', ZView.as_view(), name='z'),
   path('æ/', ÆView.as_view(), name='æ'),
   path('ø/', ØView.as_view(), name='ø'),
-  path('å/', ÅView.as_view(), name='d'),
+  path('å/', ÅView.as_view(), name='å'),
   path('gaet/', GætView.as_view(), name='gaet'),
+  path('Info/', Info.as_view(), name='Info'),
+  path('tilføj/', Tilføj.as_view(), name='tilføj'),
 ]

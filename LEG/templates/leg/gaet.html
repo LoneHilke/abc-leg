@@ -1,195 +1,274 @@
 {% extends 'leg/base.html' %}
 {% block content %}
 
+
+  
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+
 <h2>Hvad forestiller dette billede?</h2>
+<br>
 
-{% for billede in billeder %}
-    <div style="margin-bottom: 20px;">
-        <img src="{{ billede.image.url }}" alt="{{ billede.ord }}" style="max-width: 300px;"><br>
+    
+<div class="row">
+    <div class="col-4">
+        <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+        <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="#item-1">A</a>
+            <a class="nav-link" href="#item-2">B</a>
+            <a class="nav-link" href="#item-3">C</a>
+            <a class="nav-link" href="#item-4">D</a>
+            <a class="nav-link" href="#item-5">E</a>
+            <a class="nav-link" href="#item-6">F</a>
+            <a class="nav-link" href="#item-6">G</a>
+            <a class="nav-link" href="#item-6">H</a>
+            <a class="nav-link" href="#item-6">I</a>
+            <a class="nav-link" href="#item-6">J</a>
+            <a class="nav-link" href="#item-6">K</a>
+            <a class="nav-link" href="#item-6">L</a>
+            <a class="nav-link" href="#item-6">M</a>
+            <a class="nav-link" href="#item-6">N</a>
+            <a class="nav-link" href="#item-6">O</a>
+            <a class="nav-link" href="#item-6">P</a>
+            <a class="nav-link" href="#item-6">Q</a>
+            <a class="nav-link" href="#item-6">R</a>
+            <a class="nav-link" href="#item-6">S</a>
+            <a class="nav-link" href="#item-6">T</a>
+            <a class="nav-link" href="#item-6">U</a>
+            <a class="nav-link" href="#item-6">V</a>
+            <a class="nav-link" href="#item-6">W</a>
+            <a class="nav-link" href="#item-6">X</a>
+            <a class="nav-link" href="#item-6">Y</a>
+            <a class="nav-link" href="#item-6">Z</a>
+            <a class="nav-link" href="#item-6">Æ</a>
+            <a class="nav-link" href="#item-6">Ø</a>
+            <a class="nav-link" href="#item-6">Å</a>
 
-        <form method="post" style="display: inline;">
+        </nav>
+        </nav>
+
+    </div>
+    
+  
+</body>
+
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+      
+    <div id="item-1">
+        <h4>A</h4>
+        <img src="{{ a.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+        <!--<form method="post">
             {% csrf_token %}
-            <label>Hvad forestiller billedet?</label>
-            <input type="text" name="gæt">
-            <input type="hidden" name="billede_id" value="{{ billede.id }}">
+            {{ form.as_p }}
+            <input type="hidden" name="a_id" value="{{ a.id }}">
             <button type="submit">Tjek</button>
+        </form>-->
+
+        <form method="post">
+        {% csrf_token %}
+        <label for="gæt-a">Hvad forestiller billedet?</label>
+        <input type="text" name="gæt" id="gæt-a">
+        <input type="hidden" name="a_id" value="{{ a.id }}">
+        <button type="submit">Tjek</button>
         </form>
 
-        {% if feedback and billede.id in feedback %}
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
-            <p><strong>{{ feedback.billede.id }}</strong></p>
+        {% if aktiv_model == 'a' and aktiv_id == a.id %}
+            <p><strong>{{ resultat }}</strong></p>
         {% endif %}
+         {% if resultat %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %} 
+        <hr>
+        </div>
+
+      
+      <div id="item-2">
+        <h4>B</h4>
+        <img src="{{ b.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+        <!--<form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="b_id" value="{{ b.id }}">
+    
+            <button type="submit">Tjek</button>
+        </form>-->
+
+        <form method="post">
+        {% csrf_token %}
+        <label for="gæt-b">Hvad forestiller billedet?</label>
+        <input type="text" name="gæt" id="gæt-b">
+        <input type="hidden" name="b_id" value="{{ b.id }}">
+        <button type="submit">Tjek</button>
+        </form>
+
+        {% if resultat and aktiv_model == 'b' and aktiv_id == b.id %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %}
+         {% if resultat %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %} 
+        
+        <hr>
+      </div>
+
+      <div id="item-3">
+        <h4>C</h4>
+        <img src="{{ c.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+        <!--<form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="c_id" value="{{ c.id }}">
+    
+            <button type="submit">Tjek</button>
+        </form>-->
+
+        <form method="post">
+        {% csrf_token %}
+        <label for="gæt-c">Hvad forestiller billedet?</label>
+        <input type="text" name="gæt" id="gæt-c">
+        <input type="hidden" name="c_id" value="{{ c.id }}">
+        <button type="submit">Tjek</button>
+        </form>
+
+        {% if resultat and aktiv_model == 'c' and aktiv_id == c.id %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %}
+         {% if resultat %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %} 
+        
+        <hr>
+      </div>
+
+      <div id="item-4">
+        <h4>D</h4>
+        <img src="{{ d.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+        <!--<form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="d_id" value="{{ d.id }}">
+    
+            <button type="submit">Tjek</button>
+        </form>-->
+
+        <form method="post">
+        {% csrf_token %}
+        <label for="gæt-d">Hvad forestiller billedet?</label>
+        <input type="text" name="gæt" id="gæt-d">
+        <input type="hidden" name="d_id" value="{{ d.id }}">
+        <button type="submit">Tjek</button>
+        </form>
+
+        {% if resultat and aktiv_model == 'd' and aktiv_id == d.id %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %}
+         {% if resultat %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %} 
+        
+        <hr>
+      </div>
+
+      <div id="item-5">
+        <h4>E</h4>
+        <img src="{{ e.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+        <form method="post">
+        {% csrf_token %}
+        <label for="gæt-e">Hvad forestiller billedet?</label>
+        <input type="text" name="gæt" id="gæt-e">
+        <input type="hidden" name="e_id" value="{{ e.id }}">
+        <button type="submit">Tjek</button>
+        </form>
+
+        {% if resultat and aktiv_model == 'e' and aktiv_id == e.id %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %}
+         {% if resultat %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %} 
+        
+        <hr>
+      </div>
+
+      <div id="item-6">
+        <h4>F</h4>
+        <img src="{{ f.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+        <form method="post">
+        {% csrf_token %}
+        <label for="gæt-f">Hvad forestiller billedet?</label>
+        <input type="text" name="gæt" id="gæt-f">
+        <input type="hidden" name="f_id" value="{{ f.id }}">
+        <button type="submit">Tjek</button>
+        </form>
+
+        {% if resultat and aktiv_model == 'f' and aktiv_id == f.id %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %}
+         {% if resultat %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %} 
+        
+
+        <hr>
+      </div>
+
+      <div id="item-7">
+        <h4>G</h4>
+        <img src="{{ g.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+        <form method="post">
+        {% csrf_token %}
+        <label for="gæt-g">Hvad forestiller billedet?</label>
+        <input type="text" name="gæt" id="gæt-g">
+        <input type="hidden" name="g_id" value="{{ g.id }}">
+        <button type="submit">Tjek</button>
+        </form>
+
+        {% if resultat and aktiv_model == 'g' and aktiv_id == g.id %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %}
+         {% if resultat %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %} 
+        
+
+        <hr>
+      </div>
+
+      <div id="item-8">
+        <h4>H</h4>
+        <img src="{{ h.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+
+        <form method="post">
+        {% csrf_token %}
+        <label for="gæt-h">Hvad forestiller billedet?</label>
+        <input type="text" name="gæt" id="gæt-h">
+        <input type="hidden" name="h_id" value="{{ h.id }}">
+        <button type="submit">Tjek</button>
+        </form>
+
+        {% if resultat and aktiv_model == 'h' and aktiv_id == h.id %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %}
+         {% if resultat %}
+            <p><strong>{{ resultat }}</strong></p>
+        {% endif %} 
+        
+
+        <hr>
+      </div>
+      
     </div>
-{% endfor %}
-
-
-<!--<img src="{{ a.image.url }}" alt="Billede" style="max-width: 300px;"><br>
-<img src="{{ b.image.url }}" alt="Billede" style="max-width: 300px;"><br>
-
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="a_id" value="{{ a.id }}">
-    <input type="hidden" name="b_id" value="{{ b.id }}">
-
-    <button type="submit">Tjek</button>
-</form>
-
-{% if resultat %}
-    <p><strong>{{ resultat }}</strong></p>
-{% endif %}
+  </div>
+</div>
 
 
 
-
-
-<img src="{{ c.image.url }}" alt="Billede" style="max-width: 300px;"><br>
-
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="c_id" value="{{ c.id }}">
-    <button type="submit">Tjek</button>
-</form>
-
-{% if resultat %}
-    <p><strong>{{ resultat }}</strong></p>
-{% endif %}
-
-<img src="{{ d.image.url }}" alt="Billede" style="max-width: 300px;"><br>
-
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="d_id" value="{{ d.id }}">
-    <button type="submit">Tjek</button>
-</form>
-
-{% if resultat %}
-    <p><strong>{{ resultat }}</strong></p>
-{% endif %}
-
-<img src="{{ e.image.url }}" alt="Billede" style="max-width: 300px;"><br>
-
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="e_id" value="{{ e.id }}">
-    <button type="submit">Tjek</button>
-</form>
-
-{% if resultat %}
-    <p><strong>{{ resultat }}</strong></p>
-{% endif %}
-
-<img src="{{ f.image.url }}" alt="Billede" style="max-width: 300px;"><br>
-
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="f_id" value="{{ f.id }}">
-    <button type="submit">Tjek</button>
-</form>
-
-{% if resultat %}
-    <p><strong>{{ resultat }}</strong></p>
-{% endif %}
-
-<img src="{{ g.image.url }}" alt="Billede" style="max-width: 300px;"><br>
-
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="g_id" value="{{ g.id }}">
-    <button type="submit">Tjek</button>
-</form>
-
-{% if resultat %}
-    <p><strong>{{ resultat }}</strong></p>
-{% endif %}-->
 
 {% endblock content %}

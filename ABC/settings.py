@@ -51,6 +51,10 @@ NAV_MENU_LEFT = [
         "url": "/",
     },
     {
+        "name": "Info",
+        "url": "/Info",
+    },
+    {
         "name": "A",
         "url": "/a",
     },
@@ -105,60 +109,82 @@ NAV_MENU_LEFT = [
     {
         "name": "N",
         "url": "/n",
-    },{
+    },
+    {
         "name": "O",
         "url": "/o",
-    },{
+    },
+    {
         "name": "P",
         "url": "/p",
-    },{
+    },
+    {
         "name": "Q",
         "url": "/q",
-    },{
+    },
+    {
         "name": "R",
         "url": "/r",
-    },{
+    },
+    {
         "name": "S",
         "url": "/s",
-    },{
+    },
+    {
         "name": "T",
         "url": "/t",
-    },{
+    },
+    {
         "name": "U",
         "url": "/u",
-    },{
+    },
+    {
         "name": "V",
         "url": "/v",
-    },{
+    },
+    {
         "name": "W",
         "url": "/w",
-    },{
+    },
+    {
         "name": "X",
         "url": "/x",
-    },{
+    },
+    {
         "name": "Y",
         "url": "/y",
-    },{
+    },
+    {
         "name": "Z",
         "url": "/z",
-    },{
+    },
+    {
         "name": "Æ",
         "url": "/æ",
-    },{
+    },
+    {
         "name": "Ø",
         "url": "/ø",
-    },{
+    },
+    {
         "name": "Å",
         "url": "/å",
-    },{
+    },
+    {
         "name": "Stav til ordet",
         "url": "/gaet",
-    },{
+    },
+    {
         "name": "Find det rette ord",
         "url": "#",
-    },{
+    },
+    {
         "name": "Hvad mangler",
         "url": "#",
+    },
+    {
+        "name": "Tilføj",
+        "url": "/tilføj",
     },
 ]
 NAV_MENU_RIGHT = [

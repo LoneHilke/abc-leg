@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,Æ,Ø,Å, Alfabet
+from .models import A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,Æ,Ø,Å, Alfabet, Bogstav
 # Register your models here.
 admin.site.register(A)
 admin.site.register(B)
@@ -31,3 +31,4 @@ admin.site.register(Æ)
 admin.site.register(Ø)
 admin.site.register(Å)
 admin.site.register(Alfabet)
+admin.site.register(Bogstav)
