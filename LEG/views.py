@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from .models import A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, Æ, Ø, Å, Alfabet
+from .models import A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, Æ, Ø, Å, Alfabet, Ekstra
 from .forms import GætForm, EkstraForm
 import random
 
@@ -385,12 +385,37 @@ class Info(View):
 class Tilføj(View):
     def get(self, request, *args, **kwargs):
         form = EkstraForm()
+        if form.is_valid():
+            form.save()
+            return redirect('/')
         context = {
             'form':form
         }
         return render(request, 'leg/tilføj.html', context)
 
+class EkstraView(View):
+    def get(self, request, *args, **kwargs):
+        a = A.objects.filter(Ekstra_name_contains='A')
+        b = B.objects.filter(Ekstra_name_contains='B')
+        c = C.objects.filter(Ekstra_name_contains='C')
+        d = D.objects.filter(Ekstra_name_contains='D')
+        e = E.objects.filter(Ekstra_name_contains='E')
+        f = F.objects.filter(Ekstra_name_contains='F')
+        g = G.objects.filter(Ekstra_name_contains='G')
+        h = H.objects.filter(Ekstra_name_contains='H')
 
+        context = {
+            'a':a,
+            'b':b,
+            'c':c,
+            'd':d,
+            'e':e,
+            'f':f,
+            'g':g,
+            'h':h,
+        }
+
+        return render(request, 'leg/tilføj.html', context)
 
 """class GætView(View):
     def get(self, request, *args, **kwargs):

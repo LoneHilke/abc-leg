@@ -1,5 +1,5 @@
 from django import forms
-from .models import Ekstra
+from .models import Ekstra, Alfabet
 
 class GætForm(forms.Form):
     gæt = forms.CharField(label="Hvad forestiller billedet?", max_length=50)
@@ -10,5 +10,5 @@ class EkstraForm(forms.ModelForm):
       attrs={'placeholder': 'Tilføj...'}))
 
   class Meta:
-    model = Ekstra 
+    model = Alfabet 
     fields = '__all__'
